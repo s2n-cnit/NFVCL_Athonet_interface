@@ -1,0 +1,43 @@
+[
+  {
+      "sliceId": "Induce-5G-Athens-EMBB1",
+      "site": "Athens",
+      "expDataRateUL": 30,
+      "expDataRateDL": 300,
+      "userDensity": 10,
+      "userSpeed": 80,
+      "trafficType": "TCP",
+      "imsi": ["imsi1", "imsi2", "imsi3"]
+  },
+  {
+      "sliceId": "Induce-5G-Athens-EMBB2",
+      "site": "Athens",
+      "expDataRateUL": 65,
+      "expDataRateDL": 1000,
+      "userDensity": 10,
+      "userSpeed": 80,
+      "trafficType": "TCP",
+      "imsi": ["imsi1", "imsi2", "imsi3"]
+  },
+  {
+      "sliceId": "Induce-5G-Athens-URLLC1",
+      "site": "Athens",
+      "latency": 5,
+      "jitter": 1,
+      "expDataRateUL": 15,
+      "expDataRateDL": 50,
+      "trafficType": "TCP",
+      "imsi": ["imsi1", "imsi2", "imsi3"]
+  },
+  {
+      "sliceId": "Induce-5G-Athens-URLLC2",
+      "site": "Athens",
+      "latency": 5,
+      "jitter": 1,
+      "expDataRateUL": 65,
+      "expDataRateDL": 70,
+      "trafficType": "TCP",
+      "imsi": ["imsi1", "imsi2", "imsi3"]
+  }
+]
+
