@@ -132,6 +132,8 @@ class MiniNetworkEndpoints(BaseModel):
 
 class MiniProfileParams(BaseModel):
     sliceAmbr: str
+    ueAmbr = str
+    maximumNumberUE = int
 
 
 class MiniSliceProfile(BaseModel):
@@ -140,9 +142,14 @@ class MiniSliceProfile(BaseModel):
     profileParams: MiniProfileParams
 
 
+class MiniSubscriber(BaseModel):
+    imsi: str
+
+
 class MiniConfig(BaseModel):
     network_endpoints: MiniNetworkEndpoints
     sliceProfiles: List[MiniSliceProfile]
+    subscribers: List[MiniSubscriber]
 
 
 class MiniFree5gcModel(BaseModel):
