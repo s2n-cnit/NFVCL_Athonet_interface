@@ -1,2 +1,5 @@
+uvloop
 fastapi
 requests
+httptools==0.1
+
