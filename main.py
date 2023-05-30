@@ -1,16 +1,18 @@
-# This is a sample Python script.
+"""
+Copyright (c) 2023 - S2N Lab (https://s2n.cnit.it/)
+"""
+from fastapi import FastAPI
+from router import router
+from utils import create_logger
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+logger = create_logger("NFVCL-Athonet Interface")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+app = FastAPI(
+    title="NFVCL-Athonet Interface",
+    version="0.1",
+    license_info={
+        "name": "Apache 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+    },
+)
+app.include_router(router)

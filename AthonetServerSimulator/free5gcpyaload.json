@@ -1,0 +1,103 @@
+{
+  "type": "Free5GC_K8s",
+  "config": {
+    "network_endpoints": {
+      "mgt": "mngn-vnf-os",
+      "wan": "mngn-vnf-os",
+      "data_nets": [
+        {
+          "net_name": "internet",
+          "dnn": "internet",
+          "dns": "8.8.8.8", 
+          "pools": [{"cidr": "10.0.0.0/16"}],
+          "uplinkAmbr": "100 Mbps",
+          "downlinkAmbr": "100 Mbps",
+          "default5qi": "9"
+        }
+      ]
+    },
+    "plmn": "00101",
+    "sliceProfiles": [
+      {
+        "sliceId": "000001",
+        "sliceType": "EMBB",
+        "dnnList": ["internet"],
+        "profileParams": {
+          "isolationLevel": "ISOLATION",
+          "sliceAmbr": "20 Mbps",
+          "ueAmbr": "10 Mbps",
+          "maximumNumberUE": 10,
+          "pduSessions": [
+            {
+              "pduSessionId": "1",
+              "pduSessionAmbr": "20 Mbps",
+              "flows": [
+                {
+                  "flowId": "1",
+                  "ipAddrFilter": "8.8.4.4",
+                  "qi": "9",
+                  "gfbr": "10 Mbps"
+                }
+              ]
+            }
+          ]
+        },
+        "locationConstraints": [
+          {
+            "geographicalAreaId": "1",
+            "tai": "00101000001"
+          }
+        ],
+        "enabledUEList": [
+          {
+            "ICCID": "*"
+          }
+        ]
+      }
+    ],
+    "subscribers": [
+      {
+        "imsi": "001010000000001",
+        "k": "465B5CE8B199B49FAA5F0A2EE238A6BC",
+        "opc": "E8ED289DEBA952E4283B54E88E6183CA",
+        "snssai": [
+          {
+            "sliceId": "000001",
+            "sliceType": "EMBB",
+            "pduSessionIds": [
+              "1"
+            ],
+            "default_slice": true
+          }
+        ]
+      }
+    ]
+  },
+  "areas": [
+    {
+      "id": 4,
+      "nci": "0x00000004",
+      "idLength": 32,
+      "core": true,
+      "slices": [ 
+          {
+              "sliceType": "EMBB",
+              "sliceId": "000001"
+          }
+        ]
+    },
+    {
+      "id": 1,
+      "nci": "0x00000001",
+      "idLength": 32,
+      "core": false,
+      "slices": [ 
+          {
+              "sliceType": "EMBB",
+              "sliceId": "000001"
+          }
+        ]
+    }
+  ]
+}
+
