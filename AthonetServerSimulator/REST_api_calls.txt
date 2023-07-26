@@ -1,5 +1,7 @@
 
-curl -H 'Content-Type: application/json' -X POST http://localhost:5002/v1/south/addslices -d @slices.json
+curl -H 'Content-Type: application/json' -X POST http://localhost:5002/api/v1/sliceInventory/SB/reportSliceParameters/embb -d @slices.json
+curl -H 'Content-Type: application/json' -X POST http://localhost:5002/api/v1/sliceInventory/SB/reportSliceParameters/urllc -d @slices.json
+
 
 
 curl -H 'Content-Type: application/json' -X POST http://localhost:5002/v1/addslice -d @free5gcpyaload.json
@@ -11,5 +13,16 @@ curl -H 'Content-Type: application/json' -X POST http://localhost:5002/v1/delsli
 
 
 curl -H 'Content-Type: application/json' -X POST http://localhost:5002/v1/checkslice -d @free5gcpyaload.json
+
+
+
+
+
+
+
+#curl -H 'Content-Type: application/json' -X POST http://10.10.10.211:8080/sliceUE/attach -d @athonetpayload.json
+
+# netcat
+nc -l 5200
 
 

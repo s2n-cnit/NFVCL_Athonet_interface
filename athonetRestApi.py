@@ -20,7 +20,7 @@ class AthonetRestAPI():
             self.athonetURL = "http://{}:{}".format(athonetIP, athonetPort)
 
         self.urlBase = "{}".format(self.athonetURL)
-        self.addImsiUrlExtension = "/sliceUEs/attach"
+        self.addImsiUrlExtension = "/sliceUE/attach"
 
         self.headers = {"Content-Type": "application/json"}
 

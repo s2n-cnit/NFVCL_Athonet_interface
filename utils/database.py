@@ -72,6 +72,23 @@ class Database():
             logger.info("Impossible to write slice(s): {} - error: {}". format(data, e))
             raise ValueError("Impossible to write slice(s): {} - error: {}". format(data, e))
 
+    def deleteAthonetSlices(self, data: Union[AthonetSlice, List[AthonetSlice]]):
+        """
+        Delete slice (or array of slices) from the DB as requested by Athonet slice manager.
+        :param data:
+        :return:
+        """
+        try:
+            if type(data) != list:
+                dataList = [data]
+            else:
+                dataList = data
+            for elem in dataList:
+                self.__delete(athonetSlicesCollectionName, {"sliceId": elem.sliceId})
+        except Exception as e:
+            logger.info("Impossible to delete slice(s): {} - error: {}". format(data, e))
+            raise ValueError("Impossible to delete slice(s): {} - error: {}". format(data, e))
+
     def readAthonetSlices(self, sliceId: dict = None) -> List[AthonetSlice]:
         try:
             sliceList = []

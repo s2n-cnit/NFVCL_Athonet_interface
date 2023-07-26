@@ -36,7 +36,7 @@ athonetRouter = APIRouter(
     responses={404: {"description": "Not found"}}
 )
 
-@athonetRouter.post("/sliceUEs/attach")
+@athonetRouter.post("/sliceUE/attach")
 async def addImsi(payload: AddImsiRequest):
     logger.info("Add IMSI to slice")
     logger.info("Payload: {}".format(payload))

@@ -1,0 +1,586 @@
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [427377]
+2023-05-31 08:36:30,625 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [427380]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-05-31 08:37:08,931 - Router - INFO - Received message from Athonet: [AthonetSlice(sliceId='Induce-5G-Athens-EMBB1', site='Athens', expDataRateUL=30, expDataRateDL=300, userDensity=10, userSpeed=80, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-EMBB2', site='Athens', expDataRateUL=65, expDataRateDL=1000, userDensity=10, userSpeed=80, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-URLLC1', site='Athens', expDataRateUL=15, expDataRateDL=50, userDensity=0, userSpeed=0, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-URLLC2', site='Athens', expDataRateUL=65, expDataRateDL=70, userDensity=0, userSpeed=0, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3'])]
+INFO:     Received message from Athonet: [AthonetSlice(sliceId='Induce-5G-Athens-EMBB1', site='Athens', expDataRateUL=30, expDataRateDL=300, userDensity=10, userSpeed=80, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-EMBB2', site='Athens', expDataRateUL=65, expDataRateDL=1000, userDensity=10, userSpeed=80, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-URLLC1', site='Athens', expDataRateUL=15, expDataRateDL=50, userDensity=0, userSpeed=0, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-URLLC2', site='Athens', expDataRateUL=65, expDataRateDL=70, userDensity=0, userSpeed=0, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3'])]
+2023-05-31 08:37:08,932 - Database - INFO - delete
+INFO:     delete
+2023-05-31 08:37:08,935 - Database - INFO - write
+INFO:     write
+2023-05-31 08:37:08,943 - Database - INFO - delete
+INFO:     delete
+2023-05-31 08:37:08,944 - Database - INFO - write
+INFO:     write
+2023-05-31 08:37:08,945 - Database - INFO - delete
+INFO:     delete
+2023-05-31 08:37:08,946 - Database - INFO - write
+INFO:     write
+2023-05-31 08:37:08,947 - Database - INFO - delete
+INFO:     delete
+2023-05-31 08:37:08,948 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:32970 - "POST /v1/south/addslices HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [427380]
+INFO:     Stopping reloader process [427377]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [427440]
+2023-05-31 08:50:04,750 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [427443]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [427443]
+INFO:     Stopping reloader process [427440]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [427905]
+2023-05-31 09:10:16,531 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [427908]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [3576]
+2023-07-19 12:30:47,048 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [3579]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3579]
+INFO:     Stopping reloader process [3576]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [44021]
+2023-07-25 07:29:11,787 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [44024]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'athonetRestApi.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [44024]
+2023-07-25 07:48:48,001 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [44465]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [44465]
+INFO:     Stopping reloader process [44021]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [45185]
+2023-07-25 09:14:51,765 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [45188]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45188]
+INFO:     Stopping reloader process [45185]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [45260]
+2023-07-25 09:40:21,365 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [45263]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45263]
+INFO:     Stopping reloader process [45260]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [45606]
+2023-07-25 11:31:20,316 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [45609]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     10.10.10.211:52498 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 404 Not Found
+INFO:     10.10.10.211:52502 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 404 Not Found
+INFO:     10.10.10.211:52508 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 404 Not Found
+INFO:     10.10.10.211:52522 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 404 Not Found
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45609]
+2023-07-26 08:11:35,999 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47519]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47519]
+INFO:     Stopping reloader process [45606]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [47567]
+2023-07-26 08:14:00,644 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47570]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-07-26 08:17:29,912 - Router - INFO - Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3']
+INFO:     Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3']
+2023-07-26 08:17:29,913 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:17:29,916 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:38938 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 08:18:03,398 - Router - INFO - Received message from Athonet (EMBB): [AthonetSlice(sliceId='Induce-5G-Athens-EMBB1', site='Athens', expDataRateUL=30, expDataRateDL=300, userDensity=10, userSpeed=80, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-EMBB2', site='Athens', expDataRateUL=65, expDataRateDL=1000, userDensity=10, userSpeed=80, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-URLLC1', site='Athens', expDataRateUL=15, expDataRateDL=50, userDensity=0, userSpeed=0, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-URLLC2', site='Athens', expDataRateUL=65, expDataRateDL=70, userDensity=0, userSpeed=0, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3'])]
+INFO:     Received message from Athonet (EMBB): [AthonetSlice(sliceId='Induce-5G-Athens-EMBB1', site='Athens', expDataRateUL=30, expDataRateDL=300, userDensity=10, userSpeed=80, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-EMBB2', site='Athens', expDataRateUL=65, expDataRateDL=1000, userDensity=10, userSpeed=80, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-URLLC1', site='Athens', expDataRateUL=15, expDataRateDL=50, userDensity=0, userSpeed=0, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3']), AthonetSlice(sliceId='Induce-5G-Athens-URLLC2', site='Athens', expDataRateUL=65, expDataRateDL=70, userDensity=0, userSpeed=0, trafficType='TCP', imsi=['imsi1', 'imsi2', 'imsi3'])]
+2023-07-26 08:18:03,398 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:18:03,400 - Database - INFO - write
+INFO:     write
+2023-07-26 08:18:03,401 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:18:03,402 - Database - INFO - write
+INFO:     write
+2023-07-26 08:18:03,403 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:18:03,404 - Database - INFO - write
+INFO:     write
+2023-07-26 08:18:03,406 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:18:03,407 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:50152 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47570]
+INFO:     Stopping reloader process [47567]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [47666]
+2023-07-26 08:18:49,694 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47669]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-07-26 08:20:33,425 - Router - INFO - Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['202031001004117']
+INFO:     Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['202031001004117']
+2023-07-26 08:20:33,425 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:20:33,428 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:60438 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 08:20:33,440 - Router - INFO - Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB2' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['']
+INFO:     Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB2' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['']
+2023-07-26 08:20:33,440 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:20:33,441 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:60442 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 08:20:33,445 - Router - INFO - Received message from Athonet (URLLC): sliceId='Induce-5G-Athens-URLLC1' site='Athens' expDataRateUL=10 expDataRateDL=100 userDensity=0 userSpeed=0 trafficType='TCP' imsi=['']
+INFO:     Received message from Athonet (URLLC): sliceId='Induce-5G-Athens-URLLC1' site='Athens' expDataRateUL=10 expDataRateDL=100 userDensity=0 userSpeed=0 trafficType='TCP' imsi=['']
+2023-07-26 08:20:33,445 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:20:33,446 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:60446 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+2023-07-26 08:20:33,450 - Router - INFO - Received message from Athonet (URLLC): sliceId='Induce-5G-Athens-URLLC2' site='Athens' expDataRateUL=10 expDataRateDL=100 userDensity=0 userSpeed=0 trafficType='TCP' imsi=['']
+INFO:     Received message from Athonet (URLLC): sliceId='Induce-5G-Athens-URLLC2' site='Athens' expDataRateUL=10 expDataRateDL=100 userDensity=0 userSpeed=0 trafficType='TCP' imsi=['']
+2023-07-26 08:20:33,450 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:20:33,452 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:60454 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47669]
+2023-07-26 08:25:09,088 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47690]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47690]
+2023-07-26 08:25:36,955 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47704]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47704]
+INFO:     Stopping reloader process [47666]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [47717]
+2023-07-26 08:25:43,026 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47720]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-07-26 08:26:36,625 - Router - INFO - DELETE Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB2' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['']
+INFO:     DELETE Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB2' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['']
+INFO:     10.10.10.211:44472 - "DELETE /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 08:28:18,025 - Router - INFO - Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=100 expDataRateDL=10000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['202031001004117']
+INFO:     Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=100 expDataRateDL=10000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['202031001004117']
+2023-07-26 08:28:18,025 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:28:18,028 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:60548 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 08:29:28,790 - Router - INFO - Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['202031001004117']
+INFO:     Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['202031001004117']
+2023-07-26 08:29:28,790 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:29:28,792 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:39894 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 08:29:28,797 - Router - INFO - Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB2' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['']
+INFO:     Received message from Athonet (EMBB): sliceId='Induce-5G-Athens-EMBB2' site='Athens' expDataRateUL=100 expDataRateDL=1000 userDensity=0 userSpeed=0 trafficType='UDP' imsi=['']
+2023-07-26 08:29:28,798 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:29:28,799 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:39908 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 08:29:28,802 - Router - INFO - Received message from Athonet (URLLC): sliceId='Induce-5G-Athens-URLLC1' site='Athens' expDataRateUL=10 expDataRateDL=100 userDensity=0 userSpeed=0 trafficType='TCP' imsi=['']
+INFO:     Received message from Athonet (URLLC): sliceId='Induce-5G-Athens-URLLC1' site='Athens' expDataRateUL=10 expDataRateDL=100 userDensity=0 userSpeed=0 trafficType='TCP' imsi=['']
+2023-07-26 08:29:28,802 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:29:28,803 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:39914 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+2023-07-26 08:29:28,807 - Router - INFO - Received message from Athonet (URLLC): sliceId='Induce-5G-Athens-URLLC2' site='Athens' expDataRateUL=10 expDataRateDL=100 userDensity=0 userSpeed=0 trafficType='TCP' imsi=['']
+INFO:     Received message from Athonet (URLLC): sliceId='Induce-5G-Athens-URLLC2' site='Athens' expDataRateUL=10 expDataRateDL=100 userDensity=0 userSpeed=0 trafficType='TCP' imsi=['']
+2023-07-26 08:29:28,807 - Database - INFO - delete
+INFO:     delete
+2023-07-26 08:29:28,808 - Database - INFO - write
+INFO:     write
+INFO:     10.10.10.211:39928 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47720]
+2023-07-26 09:05:00,192 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47816]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'models/athonetModel.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47816]
+2023-07-26 09:09:14,839 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47864]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47864]
+2023-07-26 09:11:55,325 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47878]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'utils/database.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47878]
+2023-07-26 09:12:50,063 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47896]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47896]
+2023-07-26 09:17:40,076 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47917]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'utils/database.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47917]
+2023-07-26 09:19:44,075 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47939]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47939]
+2023-07-26 09:28:38,069 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47948]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47948]
+2023-07-26 09:30:17,858 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47962]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'utils/database.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47962]
+2023-07-26 09:31:14,262 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [47984]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [47984]
+2023-07-26 09:42:40,425 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [48002]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'models/athonetModel.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48002]
+2023-07-26 09:43:39,359 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [48021]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'models/athonetModel.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48021]
+2023-07-26 09:46:56,410 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [48071]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48071]
+2023-07-26 09:47:59,817 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [48095]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  Detected file change in 'athonetRestApi.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48095]
+2023-07-26 09:48:45,236 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [48117]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48117]
+INFO:     Stopping reloader process [47717]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [48131]
+2023-07-26 09:49:02,505 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [48134]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48134]
+INFO:     Stopping reloader process [48131]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [48156]
+2023-07-26 09:50:00,387 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [48159]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-07-26 09:57:22,893 - Router - INFO - Received message from Athonet (embb): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=[] type=''
+INFO:     Received message from Athonet (embb): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=[] type=''
+2023-07-26 09:57:22,894 - Database - INFO - delete
+INFO:     delete
+2023-07-26 09:57:22,898 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:47142 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48159]
+INFO:     Stopping reloader process [48156]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [48364]
+2023-07-26 09:58:23,661 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 44300
+INFO:     Started server process [48367]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-07-26 09:58:38,294 - Router - INFO - Received message from Athonet (embb): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type=''
+INFO:     Received message from Athonet (embb): sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type=''
+2023-07-26 09:58:38,294 - Database - INFO - delete
+INFO:     delete
+2023-07-26 09:58:38,297 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:43974 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 09:58:59,708 - Router - INFO - Received message from Athonet (embb): sliceId='Induce-5G-Athens-EMBB2' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='UDP' imsi=[''] type=''
+INFO:     Received message from Athonet (embb): sliceId='Induce-5G-Athens-EMBB2' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='UDP' imsi=[''] type=''
+2023-07-26 09:58:59,708 - Database - INFO - delete
+INFO:     delete
+2023-07-26 09:58:59,709 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:40200 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/embb HTTP/1.1" 200 OK
+2023-07-26 10:00:09,021 - Router - INFO - Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=[] type=''
+INFO:     Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=[] type=''
+2023-07-26 10:00:09,021 - Database - INFO - delete
+INFO:     delete
+2023-07-26 10:00:09,023 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:38346 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+2023-07-26 10:00:47,752 - Router - INFO - Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC2' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type=''
+INFO:     Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC2' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type=''
+2023-07-26 10:00:47,752 - Database - INFO - delete
+INFO:     delete
+2023-07-26 10:00:47,754 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:58058 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+2023-07-26 10:01:25,250 - Router - INFO - Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=[] type=''
+INFO:     Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=[] type=''
+2023-07-26 10:01:25,251 - Database - INFO - delete
+INFO:     delete
+INFO:     127.0.0.1:50724 - "DELETE /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+2023-07-26 10:01:47,109 - Router - INFO - Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=[] type=''
+INFO:     Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=[] type=''
+2023-07-26 10:01:47,109 - Database - INFO - delete
+INFO:     delete
+2023-07-26 10:01:47,111 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:55326 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+2023-07-26 10:02:42,816 - Router - INFO - Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=700 trafficType='TCP' imsi=[] type=''
+INFO:     Received message from Athonet (urllc): sliceId='Induce-5G-Athens-URLCC1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=700 trafficType='TCP' imsi=[] type=''
+2023-07-26 10:02:42,816 - Database - INFO - delete
+INFO:     delete
+2023-07-26 10:02:42,818 - Database - INFO - write
+INFO:     write
+INFO:     127.0.0.1:33468 - "POST /api/v1/sliceInventory/SB/reportSliceParameters/urllc HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48367]
+INFO:     Stopping reloader process [48364]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [48795]
+2023-07-26 11:40:23,631 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 8080
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 8080
+INFO:     Started server process [48798]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-07-26 11:44:33,796 - Router - INFO - Received message from North: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])]
+INFO:     Received message from North: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])]
+2023-07-26 11:44:33,799 - Router - WARNING - Impossible to add the slice: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])] - 'Free5gck8sBlueCreateModel' object has no attribute 'confi'
+WARNING:  Impossible to add the slice: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])] - 'Free5gck8sBlueCreateModel' object has no attribute 'confi'
+INFO:     127.0.0.1:39110 - "POST /v1/addslice HTTP/1.1" 404 Not Found
+WARNING:  Detected file change in 'models/athonetModel.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48798]
+2023-07-26 11:46:08,429 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 8080
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 8080
+INFO:     Started server process [48897]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48897]
+INFO:     Stopping reloader process [48795]
+INFO:     Uvicorn running on http://0.0.0.0:5002 (Press CTRL+C to quit)
+INFO:     Started reloader process [48913]
+2023-07-26 11:46:21,139 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 8080
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 8080
+INFO:     Started server process [48916]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-07-26 11:46:31,001 - Router - INFO - Received message from North: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])]
+INFO:     Received message from North: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])]
+2023-07-26 11:46:31,005 - Router - INFO - requested SLICE: sliceId='' site='' expDataRateUL=20 expDataRateDL=20 userDensity=10 userSpeed=10 trafficType='' imsi=[] type='EMBB'
+INFO:     requested SLICE: sliceId='' site='' expDataRateUL=20 expDataRateDL=20 userDensity=10 userSpeed=10 trafficType='' imsi=[] type='EMBB'
+2023-07-26 11:46:31,005 - Router - INFO - comparing to: sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type='embb'
+INFO:     comparing to: sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type='embb'
+2023-07-26 11:46:31,005 - Router - INFO - FOUND GOOD SLICE: sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type='embb'
+INFO:     FOUND GOOD SLICE: sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type='embb'
+2023-07-26 11:46:31,006 - Athonet REST interface - INFO - POST Message sent: url=http://127.0.0.1:8080/sliceUE/attach - {'imsi': '001010000000001', 'sliceId': 'Induce-5G-Athens-EMBB1', 'usedDataRateUL': 30, 'usedDataRateDL': 300}
+INFO:     POST Message sent: url=http://127.0.0.1:8080/sliceUE/attach - {'imsi': '001010000000001', 'sliceId': 'Induce-5G-Athens-EMBB1', 'usedDataRateUL': 30, 'usedDataRateDL': 300}
+2023-07-26 11:46:31,016 - Athonet REST interface - ERROR - Impossible to execute POST call: http://127.0.0.1:8080/sliceUE/attach --- ('Connection aborted.', BadStatusLine('\n'))
+ERROR:    Impossible to execute POST call: http://127.0.0.1:8080/sliceUE/attach --- ('Connection aborted.', BadStatusLine('\n'))
+2023-07-26 11:46:31,016 - Athonet REST interface - ERROR - Impossible to execute POST call: http://127.0.0.1:8080/sliceUE/attach --- ('Connection aborted.', BadStatusLine('\n'))
+ERROR:    Impossible to execute POST call: http://127.0.0.1:8080/sliceUE/attach --- ('Connection aborted.', BadStatusLine('\n'))
+2023-07-26 11:46:31,016 - Router - WARNING - Impossible to add the slice: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])] - Impossible to execute POST call: http://127.0.0.1:8080/sliceUE/attach --- ('Connection aborted.', BadStatusLine('\n'))
+WARNING:  Impossible to add the slice: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])] - Impossible to execute POST call: http://127.0.0.1:8080/sliceUE/attach --- ('Connection aborted.', BadStatusLine('\n'))
+INFO:     127.0.0.1:44644 - "POST /v1/addslice HTTP/1.1" 404 Not Found
+WARNING:  Detected file change in 'AthonetServerSimulator/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48916]
+2023-07-26 11:48:42,686 - Router - INFO - Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 8080
+INFO:     Read from file ("athonethost.txt"): Athonet host-port: 127.0.0.1 - 8080
+INFO:     Started server process [48953]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2023-07-26 11:48:54,650 - Router - INFO - Received message from North: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])]
+INFO:     Received message from North: type='Free5GC_K8s' callbackURL='' config=SubConfig(network_endpoints=NetworkEndPoints(mgt='mngn-vnf-os', wan='mngn-vnf-os', data_nets=[SubDataNets(net_name='internet', dnn='internet', dns='8.8.8.8', pools=[Pool(cidr='10.0.0.0/16')], uplinkAmbr='100 Mbps', downlinkAmbr='100 Mbps', default5qi='9')]), plmn='00101', sliceProfiles=[SubSliceProfiles(sliceId='000001', sliceType='EMBB', dnnList=['internet'], profileParams=SubProfileParams(isolationLevel='ISOLATION', sliceAmbr='20 Mbps', ueAmbr='10 Mbps', maximumNumberUE=10, pduSessions=[SubpduSessions(pduSessionId='1', pduSessionAmbr='20 Mbps', flows=[SubFlows(flowId='1', ipAddrFilter='8.8.4.4', qi='9', gfbr='10 Mbps')])]), locationConstraints=[SubLocationConstraints(geographicalAreaId='1', tai='00101000001')], enabledUEList=[SubEnabledUEList(ICCID='*')])], subscribers=[SubSubscribers(imsi='001010000000001', k='465B5CE8B199B49FAA5F0A2EE238A6BC', opc='E8ED289DEBA952E4283B54E88E6183CA', snssai=[SubSnssai(sliceId='000001', sliceType='EMBB', pduSessionIds=['1'], default_slice=True)])]) areas=[SubArea(id=4, nci='0x00000004', idLength=32, core=True, slices=[SubSlices(sliceType='EMBB', sliceId='000001')]), SubArea(id=1, nci='0x00000001', idLength=32, core=False, slices=[SubSlices(sliceType='EMBB', sliceId='000001')])]
+2023-07-26 11:48:54,653 - Router - INFO - requested SLICE: sliceId='' site='' expDataRateUL=20 expDataRateDL=20 userDensity=10 userSpeed=10 trafficType='' imsi=[] type='EMBB'
+INFO:     requested SLICE: sliceId='' site='' expDataRateUL=20 expDataRateDL=20 userDensity=10 userSpeed=10 trafficType='' imsi=[] type='EMBB'
+2023-07-26 11:48:54,653 - Router - INFO - comparing to: sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type='embb'
+INFO:     comparing to: sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type='embb'
+2023-07-26 11:48:54,653 - Router - INFO - FOUND GOOD SLICE: sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type='embb'
+INFO:     FOUND GOOD SLICE: sliceId='Induce-5G-Athens-EMBB1' site='Athens' expDataRateUL=30 expDataRateDL=300 userDensity=10 userSpeed=80 trafficType='TCP' imsi=['imsi1', 'imsi2', 'imsi3'] type='embb'
+2023-07-26 11:48:54,654 - Athonet REST interface - INFO - POST Message sent: url=http://127.0.0.1:8080/sliceUE/attach - {'imsi': '001010000000001', 'sliceId': 'Induce-5G-Athens-EMBB1', 'usedDataRateUL': 30, 'usedDataRateDL': 300}
+INFO:     POST Message sent: url=http://127.0.0.1:8080/sliceUE/attach - {'imsi': '001010000000001', 'sliceId': 'Induce-5G-Athens-EMBB1', 'usedDataRateUL': 30, 'usedDataRateDL': 300}
+2023-07-26 11:48:54,662 - Athonet REST interface - INFO - POST Response received: url=http://127.0.0.1:8080/sliceUE/attach - <Response [200]> - {}
+INFO:     POST Response received: url=http://127.0.0.1:8080/sliceUE/attach - <Response [200]> - {}
+INFO:     127.0.0.1:58264 - "POST /v1/addslice HTTP/1.1" 200 OK

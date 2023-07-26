@@ -32,6 +32,7 @@ class AthonetSlice(BaseModel):
     userSpeed: int = 0
     trafficType: str = ""
     imsi: List[Union[str, None]] = []
+    type: str = ""
 
     @classmethod
     def fromFree5gc(cls, msg: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel]) -> AthonetSlice:
@@ -47,4 +48,5 @@ class AthonetSlice(BaseModel):
             msg.config.sliceProfiles[0].profileParams.ueAmbr, "Mbps")
         athonetSlice.trafficType = ""
         athonetSlice.imsi = []
+        athonetSlice.type = msg.config.sliceProfiles[0].sliceType
         return athonetSlice

@@ -1,0 +1,10 @@
+{
+      "sliceId": "Induce-5G-Athens-URLCC2",
+      "site": "Athens",
+      "expDataRateUL": 30,
+      "expDataRateDL": 300,
+      "userDensity": 10,
+      "userSpeed": 80,
+      "trafficType": "TCP",
+      "imsi": ["imsi1", "imsi2", "imsi3"]
+}

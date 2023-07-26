@@ -18,7 +18,7 @@ class RestAnswer202(BaseModel):
     status: str = "submitted"
 
 router = APIRouter(
-    prefix="/v1",
+    prefix="",
     tags=["Router"],
     responses={404:{"description": "Not found"}}
 )
@@ -36,6 +36,7 @@ except Exception as e:
 
 athonetInterface = AthonetRestAPI(athonetHost, athonetPort)
 
+
 def getSliceFromSlices(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel],
                        athonetSlicesList: List[AthonetSlice]) -> Union[AthonetSlice,None]:
     """
@@ -52,12 +53,26 @@ def getSliceFromSlices(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree
                     item.expDataRateUL >= athonetSliceSearch.expDataRateUL and
                     item.expDataRateDL >= athonetSliceSearch.expDataRateDL and
                     (item.userDensity >= athonetSliceSearch.userDensity or item.userDensity == 0) and
-                    (item.userSpeed >= athonetSliceSearch.userSpeed or item.userSpeed == 0)
+                    (item.userSpeed >= athonetSliceSearch.userSpeed or item.userSpeed == 0) and
+                    item.type.lower() == athonetSliceSearch.type.lower()
         ):
             return item
     return None
 
-@router.post("/addslice", response_model=RestAnswer202)
+
+def checkAndAddSliceType(sliceType: str, athonetSlices: Union[AthonetSlice, List[AthonetSlice]]):
+    if sliceType in {"urllc", "embb"}:
+        if type(athonetSlices) != list:
+            athonetSlices.type = sliceType
+        else:
+            for slice in athonetSlices:
+                slice.type = sliceType
+    else:
+        logger.error("slice type \"{}\" not supported".format(sliceType))
+        raise Exception("slice type \"{}\" not supported".format(sliceType))
+
+
+@router.post("/v1/addslice", response_model=RestAnswer202)
 async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel]):
     try:
         logger.info("Received message from North: {}".format(free5gcMessage))
@@ -75,10 +90,11 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
             #                     detail="The IMSI ({}) is yet registered in the slice {}".
             #                     format(imsiToAdd, foundSlice.sliceId))
         athonetSlice = getSliceFromSlices(free5gcMessage, readySlicesList)
-        logger.info("FOUND GOOD SLICE: {}".format(athonetSlice))
         if not athonetSlice:
             logger.warn("No slice on Athonet match requirements")
             raise HTTPException(status_code=502, detail="No slice on Athonet match requirements")
+        else:
+            logger.info("FOUND GOOD SLICE: {}".format(athonetSlice))
         addImsiToSlice = AddImsiRequest.fromAthonetSliceModel(athonetSlice)
         addImsiToSlice.imsi = imsiToAdd
         athonetInterface.addImsiToSlice(addImsiToSlice)
@@ -88,7 +104,7 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
         raise HTTPException(status_code=404, detail="Impossible to add the slice: {} - {}"
                             .format(free5gcMessage, e))
 
-@router.post("/delslice", response_model=RestAnswer202)
+@router.post("/v1/delslice", response_model=RestAnswer202)
 async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel]):
     try:
         logger.info("Received message from Athonet: {}".format(free5gcMessage))
@@ -116,7 +132,7 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
                             .format(free5gcMessage.config.subscribers[0].imsi, e))
 
 
-@router.post("/checkslice", response_model=RestAnswer202)
+@router.post("/v1/checkslice", response_model=RestAnswer202)
 async def checkImsiInSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel]):
     try:
         logger.info("Received message from Athonet: {}".format(free5gcMessage))
@@ -136,15 +152,35 @@ async def checkImsiInSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
         raise HTTPException(status_code=404, detail="Impossible to check the slice status: {}"
                             .format(e))
 
-@router.post("/south/addslices", response_model=RestAnswer202)
-async def addSlices(athonetSlices: Union[AthonetSlice, List[AthonetSlice]]):
-    logger.info("Received message from Athonet: {}".format(athonetSlices))
+
+@router.post("/api/v1/sliceInventory/SB/reportSliceParameters/{sliceType}", response_model=RestAnswer202)
+async def addSlices(sliceType: str, athonetSlices: Union[AthonetSlice, List[AthonetSlice]]):
+    logger.info("Received message from Athonet ({}): {}".format(sliceType, athonetSlices))
     try:
+        checkAndAddSliceType(sliceType, athonetSlices)
         db.writeAthonetSlices(athonetSlices)
         return RestAnswer202()
     except Exception as e:
-        logger.warn("Impossible to write the slices on the DB: {}".format(e))
+        logger.warn("Impossible to write the slices ({}) on the DB: {}".format(sliceType, e))
         raise HTTPException(status_code=404, detail="Impossible to accept the slices: {}".format(e))
+
+
+@router.delete("/api/v1/sliceInventory/SB/reportSliceParameters/{sliceType}", response_model=RestAnswer202)
+async def addSlices(sliceType: str, athonetSlices: Union[AthonetSlice, List[AthonetSlice]]):
+    logger.info("Received message from Athonet ({}): {}".format(sliceType, athonetSlices))
+    try:
+        checkAndAddSliceType(sliceType, athonetSlices)
+        db.deleteAthonetSlices(athonetSlices)
+        return RestAnswer202()
+    except Exception as e:
+        logger.warn("Impossible to delete the slices ({}) on the DB: {}".format(sliceType, e))
+        raise HTTPException(status_code=404, detail="Impossible to accept the slices: {}".format(e))
+
+
+
+
+
+
 
 
 
