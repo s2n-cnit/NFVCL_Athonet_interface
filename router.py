@@ -72,8 +72,8 @@ def checkAndAddSliceType(sliceType: str, athonetSlices: Union[AthonetSlice, List
         raise Exception("slice type \"{}\" not supported".format(sliceType))
 
 
-@router.post("/v1/addslice", response_model=RestAnswer202)
-async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel]):
+@router.post("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/add_slice", response_model=RestAnswer202)
+async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
         logger.info("Received message from North: {}".format(free5gcMessage))
         readySlices = db.readAthonetSlices()
@@ -104,8 +104,8 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
         raise HTTPException(status_code=404, detail="Impossible to add the slice: {} - {}"
                             .format(free5gcMessage, e))
 
-@router.post("/v1/delslice", response_model=RestAnswer202)
-async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel]):
+@router.post("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/del_slice", response_model=RestAnswer202)
+async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
         logger.info("Received message from Athonet: {}".format(free5gcMessage))
         readySlices = db.readAthonetSlices()
@@ -132,8 +132,8 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
                             .format(free5gcMessage.config.subscribers[0].imsi, e))
 
 
-@router.post("/v1/checkslice", response_model=RestAnswer202)
-async def checkImsiInSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel]):
+@router.post("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/check_slice", response_model=RestAnswer202)
+async def checkImsiInSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
         logger.info("Received message from Athonet: {}".format(free5gcMessage))
         readySlicesList= db.readAthonetSlices()
