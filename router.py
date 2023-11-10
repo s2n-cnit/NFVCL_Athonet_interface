@@ -98,8 +98,7 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
         else:
             readySlicesList = readySlices
         #for subscriber in free5gcMessage.config.subscribers:
-        for subscriber in getImsiListFromFile():
-            imsiToAdd = subscriber.imsi
+        for imsiToAdd in getImsiListFromFile():
             logger.info("IMSI to add: {}".format(imsiToAdd))
             foundSlice = next((item for item in readySlicesList
                                if imsiToAdd in item.imsi), None)
@@ -133,8 +132,7 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
         else:
             readySlicesList = readySlices
         #for subscriber in free5gcMessage.config.subscribers:
-        for subscriber in getImsiListFromFile():
-            imsiToRemove = subscriber.imsi
+        for imsiToRemove in getImsiListFromFile():
             logger.info("IMSI to remove: {}".format(imsiToRemove))
             foundSlice = next((item for item in readySlicesList
                                if imsiToRemove in item.imsi), None)
