@@ -131,8 +131,8 @@ class MiniNetworkEndpoints(BaseModel):
 
 
 class MiniProfileParams(BaseModel):
-    ueAmbr = Union[str, None]
-    maximumNumberUE = Union[int, None]
+    ueAmbr: Union[str, None]
+    maximumNumberUE: Union[int, None]
 
 
 class MiniSliceProfile(BaseModel):
