@@ -153,6 +153,10 @@ class MiniConfig(BaseModel):
 
 
 class MiniFree5gcModel(BaseModel):
+    callbackURL: Optional[HttpUrl] = Field(
+        default='',
+        description='url that will be used to notify when the topology terraform ends'
+    )
     config: MiniConfig
 
 
