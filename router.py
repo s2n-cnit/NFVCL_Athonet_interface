@@ -75,7 +75,7 @@ def checkAndAddSliceType(sliceType: str, athonetSlices: Union[AthonetSlice, List
 @router.post("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/add_slice", response_model=RestAnswer202)
 async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
-        logger.info("Received message from North: {}".format(free5gcMessage))
+        logger.info("Received message from OSS: {}".format(free5gcMessage))
         readySlices = db.readAthonetSlices()
         if type(readySlices) != list:
             readySlicesList = [readySlices]
@@ -107,7 +107,7 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
 @router.post("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/del_slice", response_model=RestAnswer202)
 async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
-        logger.info("Received message from Athonet: {}".format(free5gcMessage))
+        logger.info("Received message from OSS: {}".format(free5gcMessage))
         readySlices = db.readAthonetSlices()
         if type(readySlices) != list:
             readySlicesList = [readySlices]
@@ -135,7 +135,7 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
 @router.post("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/check_slice", response_model=RestAnswer202)
 async def checkImsiInSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
-        logger.info("Received message from Athonet: {}".format(free5gcMessage))
+        logger.info("Received message from OSS: {}".format(free5gcMessage))
         readySlicesList= db.readAthonetSlices()
         logger.info("read from DB: {}".format(readySlicesList))
         imsiToCheck = free5gcMessage.config.subscribers[0].imsi
