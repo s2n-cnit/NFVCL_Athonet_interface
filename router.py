@@ -179,10 +179,9 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
             return RestAnswer202()
     except Exception as e:
         restCallback(callback, "add_slice", blue_id, blue_id, "failed")
-        logger.warn("Impossible to delete IMSI ({}) from slice"
-                    .format(free5gcMessage.config.subscribers[0].imsi))
-        raise HTTPException(status_code=404, detail="Impossible to delete IMSI ({}) from slice: {}"
-                            .format(free5gcMessage.config.subscribers[0].imsi, e))
+        logger.warn("Impossible to delete IMSI from slice")
+        raise HTTPException(status_code=404, detail="Impossible to delete IMSI from slice: {}"
+                            .format(e))
 
 
 @router.post("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/check_slice", response_model=RestAnswer202)
@@ -191,15 +190,15 @@ async def checkImsiInSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
         logger.info("Received message from OSS: {}".format(free5gcMessage))
         readySlicesList= db.readAthonetSlices()
         logger.info("read from DB: {}".format(readySlicesList))
-        imsiToCheck = free5gcMessage.config.subscribers[0].imsi
-        logger.info("imsi to check: {}".format(imsiToCheck))
-        for item in readySlicesList:
-            logger.info("item.imsi: {}".format(item.imsi))
-        foundSlice = next((item for item in readySlicesList
-                           if imsiToCheck in item.imsi), None)
-        logger.info("found slice: {}".format(foundSlice))
-        if not foundSlice:
-            raise HTTPException(status_code=404, detail="IMSI not yet associated to the slice")
+        for imsiToCheck in getImsiListFromFile():
+            logger.info("imsi to check: {}".format(imsiToCheck))
+            for item in readySlicesList:
+                logger.info("item.imsi: {}".format(item.imsi))
+            foundSlice = next((item for item in readySlicesList
+                               if imsiToCheck in item.imsi), None)
+            logger.info("found slice: {}".format(foundSlice))
+            if not foundSlice:
+                raise HTTPException(status_code=404, detail="IMSI not yet associated to the slice")
         return RestAnswer202()
     except Exception as e:
         raise HTTPException(status_code=404, detail="Impossible to check the slice status: {}"
