@@ -43,7 +43,7 @@ class AthonetSlice(BaseModel):
             msg.config.sliceProfiles[0].sliceAmbr, "Mbps")
         athonetSlice.expDataRateDL = BandwidthConvertion.convert(
             msg.config.sliceProfiles[0].sliceAmbr, "Mbps")
-        athonetSlice.userDensity = msg.config.sliceProfiles[0]. profileParams.maximumNumberUE
+        athonetSlice.userDensity = msg.config.sliceProfiles[0].profileParams.maximumNumberUE
         athonetSlice.userSpeed = BandwidthConvertion.convert(
             msg.config.sliceProfiles[0].profileParams.ueAmbr, "Mbps")
         athonetSlice.trafficType = ""
