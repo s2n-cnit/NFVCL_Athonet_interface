@@ -5,7 +5,7 @@ Base model for 5g blueprints (NFVCL)
 Copyright (c) 2023 - S2N Lab (https://s2n.cnit.it/)
 """
 from __future__ import annotations
-from typing import List, Optional, Literal
+from typing import List, Optional, Literal, Union
 from pydantic import BaseModel, Field, constr, HttpUrl
 
 
@@ -131,8 +131,8 @@ class MiniNetworkEndpoints(BaseModel):
 
 
 class MiniProfileParams(BaseModel):
-    ueAmbr = str
-    maximumNumberUE = int
+    ueAmbr = Union[str, None]
+    maximumNumberUE = Union[int, None]
 
 
 class MiniSliceProfile(BaseModel):
