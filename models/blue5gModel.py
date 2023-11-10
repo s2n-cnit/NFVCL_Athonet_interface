@@ -149,7 +149,7 @@ class MiniSubscriber(BaseModel):
 class MiniConfig(BaseModel):
     network_endpoints: MiniNetworkEndpoints
     sliceProfiles: List[MiniSliceProfile]
-    subscribers: List[MiniSubscriber]
+    subscribers: Union[List[MiniSubscriber], None]
 
 
 class MiniFree5gcModel(BaseModel):
