@@ -9,6 +9,7 @@ from typing import Union, List
 from models import *
 
 athonetParametersFile = "athonethost.txt"
+imsiListFile = "imsilist.txt"
 logger = create_logger("Router")
 
 db = Database(mongoDbName="Athonet")
@@ -36,6 +37,20 @@ except Exception as e:
 
 athonetInterface = AthonetRestAPI(athonetHost, athonetPort)
 
+def getImsiListFromFile(fileName: str = ""):
+    # imsiList is a list of IMSI, like:
+    # 001010000000001
+    # 001010000000002
+    # ...
+    imsiList = []
+    try:
+        with open(imsiListFile, "r") as f:
+            imsiList = f.readlines()
+    except Exception as e:
+        logger.error("Impossible to read the file \"{}\"".format(imsiListFile))
+        raise ValueError("Impossible to read the file \"{}\"".format(imsiListFile))
+    return imsiList
+
 
 def getSliceFromSlices(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel],
                        athonetSlicesList: List[AthonetSlice]) -> Union[AthonetSlice,None]:
@@ -50,8 +65,9 @@ def getSliceFromSlices(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree
     for item in athonetSlicesList:
         logger.info("comparing to: {}".format(item))
         if (
-                    item.expDataRateUL >= athonetSliceSearch.expDataRateUL and
-                    item.expDataRateDL >= athonetSliceSearch.expDataRateDL and
+                    # expDataRateUL/DL will be set up
+                    #item.expDataRateUL >= athonetSliceSearch.expDataRateUL and
+                    #item.expDataRateDL >= athonetSliceSearch.expDataRateDL and
                     (item.userDensity >= athonetSliceSearch.userDensity or item.userDensity == 0) and
                     (item.userSpeed >= athonetSliceSearch.userSpeed or item.userSpeed == 0) and
                     item.type.lower() == athonetSliceSearch.type.lower()
@@ -81,23 +97,26 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
             readySlicesList = [readySlices]
         else:
             readySlicesList = readySlices
-        imsiToAdd = free5gcMessage.config.subscribers[0].imsi
-        foundSlice = next((item for item in readySlicesList
-                           if imsiToAdd in item.imsi), None)
-        if foundSlice:
-            logger.info("The IMSI ({}) is yet registered in the slice {}".format(imsiToAdd, foundSlice.sliceId))
-            # raise HTTPException(status_code=404,
-            #                     detail="The IMSI ({}) is yet registered in the slice {}".
-            #                     format(imsiToAdd, foundSlice.sliceId))
-        athonetSlice = getSliceFromSlices(free5gcMessage, readySlicesList)
-        if not athonetSlice:
-            logger.warn("No slice on Athonet match requirements")
-            raise HTTPException(status_code=502, detail="No slice on Athonet match requirements")
-        else:
-            logger.info("FOUND GOOD SLICE: {}".format(athonetSlice))
-        addImsiToSlice = AddImsiRequest.fromAthonetSliceModel(athonetSlice)
-        addImsiToSlice.imsi = imsiToAdd
-        athonetInterface.addImsiToSlice(addImsiToSlice)
+        #for subscriber in free5gcMessage.config.subscribers:
+        for subscriber in getImsiListFromFile():
+            imsiToAdd = subscriber.imsi
+            logger.info("IMSI to add: {}".format(imsiToAdd))
+            foundSlice = next((item for item in readySlicesList
+                               if imsiToAdd in item.imsi), None)
+            if foundSlice:
+                logger.info("The IMSI ({}) is yet registered in the slice {}".format(imsiToAdd, foundSlice.sliceId))
+                # raise HTTPException(status_code=404,
+                #                     detail="The IMSI ({}) is yet registered in the slice {}".
+                #                     format(imsiToAdd, foundSlice.sliceId))
+            athonetSlice = getSliceFromSlices(free5gcMessage, readySlicesList)
+            if not athonetSlice:
+                logger.warn("No slice on Athonet match requirements")
+                raise HTTPException(status_code=502, detail="No slice on Athonet match requirements")
+            else:
+                logger.info("FOUND GOOD SLICE: {}".format(athonetSlice))
+            addImsiToSlice = AddImsiRequest.fromAthonetSliceModel(athonetSlice)
+            addImsiToSlice.imsi = imsiToAdd
+            athonetInterface.addImsiToSlice(addImsiToSlice)
         return RestAnswer202()
     except Exception as e:
         logger.warn("Impossible to add the slice: {} - {}".format(free5gcMessage, e))
@@ -113,18 +132,21 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
             readySlicesList = [readySlices]
         else:
             readySlicesList = readySlices
-        imsiToRemove = free5gcMessage.config.subscribers[0].imsi
-        foundSlice = next((item for item in readySlicesList
-                           if imsiToRemove in item.imsi), None)
-        if not foundSlice:
-            logger.warn("IMSI ({}) was not registered. Nothing to remove".format(imsiToRemove))
-            raise HTTPException(status_code=502, detail="IMSI ({}) wan not registered."
-                                                         " Nothing to remove".format(imsiToRemove))
+        #for subscriber in free5gcMessage.config.subscribers:
+        for subscriber in getImsiListFromFile():
+            imsiToRemove = subscriber.imsi
+            logger.info("IMSI to remove: {}".format(imsiToRemove))
+            foundSlice = next((item for item in readySlicesList
+                               if imsiToRemove in item.imsi), None)
+            if not foundSlice:
+                logger.warn("IMSI ({}) was not registered. Nothing to remove".format(imsiToRemove))
+                raise HTTPException(status_code=502, detail="IMSI ({}) wan not registered."
+                                                             " Nothing to remove".format(imsiToRemove))
 
-        # TODO: Athonet-OTE Interface doesn't de-attach IMSI
-        # raise HTTPException(status_code=404,
-        #                     detail="Athonet REST API to remove IMSI is not yet implemented")
-        return RestAnswer202()
+            # TODO: Athonet-OTE Interface doesn't de-attach IMSI
+            # raise HTTPException(status_code=404,
+            #                     detail="Athonet REST API to remove IMSI is not yet implemented")
+            return RestAnswer202()
     except Exception as e:
         logger.warn("Impossible to delete IMSI ({}) from slice"
                     .format(free5gcMessage.config.subscribers[0].imsi))

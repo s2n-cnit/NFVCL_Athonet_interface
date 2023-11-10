@@ -1,5 +1,5 @@
 import logging
-
+import re
 
 def create_logger(name: str) -> logging.getLogger:
     # create logger
@@ -29,5 +29,5 @@ class BandwidthConvertion():
 
     @classmethod
     def convert(cls, value: str = "0 Mbps", toUnit: str = "bps") -> int:
-        intValue, unitValue = value.split(" bkmgBKMG")
-        return int(int(intValue)*cls.bitTable[unitValue.lower()]/cls.bitTable[toUnit.lower()])
+        strValue, unitValue = re.split(" |b|k|m|g|B|K|M|G", value, 1)
+        return int(int(float(strValue))*cls.bitTable[unitValue.lower()]/cls.bitTable[toUnit.lower()])
