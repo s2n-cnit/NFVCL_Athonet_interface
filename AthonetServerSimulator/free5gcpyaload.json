@@ -22,9 +22,9 @@
         "sliceId": "000001",
         "sliceType": "EMBB",
         "dnnList": ["internet"],
+        "sliceAmbr": "20 Mbps",
         "profileParams": {
           "isolationLevel": "ISOLATION",
-          "sliceAmbr": "20 Mbps",
           "ueAmbr": "10 Mbps",
           "maximumNumberUE": 10,
           "pduSessions": [

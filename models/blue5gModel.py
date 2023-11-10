@@ -44,7 +44,6 @@ class SubpduSessions(BaseModel):
 
 class SubProfileParams(BaseModel):
     isolationLevel: Literal["ISOLATION", "NO_ISOLATION"]
-    sliceAmbr: Optional[str] = Field('1000Mbps', description="Set sliceAmber, exp: 1000Mbps")
     ueAmbr: Optional[str] = Field('50Mbps', description="Set ueAmbr, exp: 50Mbps")
     maximumNumberUE: Optional[int]
     pduSessions: List[SubpduSessions]
@@ -63,6 +62,7 @@ class SubEnabledUEList(BaseModel):
 class SubSliceProfiles(BaseModel):
     sliceId: str
     sliceType: Literal["EMBB", "URLLC", "MMTC"]
+    sliceAmbr: Optional[str] = Field('1000Mbps', description="Set sliceAmber, exp: 1000Mbps")
     dnnList: List[str] = Field([], description="set dnn-list as a listst on names")
     profileParams: SubProfileParams
     locationConstraints: List[SubLocationConstraints]
@@ -131,7 +131,6 @@ class MiniNetworkEndpoints(BaseModel):
 
 
 class MiniProfileParams(BaseModel):
-    sliceAmbr: str
     ueAmbr = str
     maximumNumberUE = int
 
@@ -139,6 +138,7 @@ class MiniProfileParams(BaseModel):
 class MiniSliceProfile(BaseModel):
     sliceId: str
     sliceType: str
+    sliceAmbr: str
     profileParams: MiniProfileParams
 
 
