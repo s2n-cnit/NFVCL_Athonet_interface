@@ -3,6 +3,7 @@ Copyright (c) 2023 - S2N Lab (https://s2n.cnit.it/)
 """
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
+import requests
 from athonetRestApi import AthonetRestAPI
 from utils import create_logger, Database
 from typing import Union, List
@@ -51,6 +52,32 @@ def getImsiListFromFile(fileName: str = ""):
         raise ValueError("Impossible to read the file \"{}\"".format(imsiListFile))
     return imsiList
 
+def restCallback(callback, requestedOperation, blueId, sessionId, status):
+    if callback:
+        logger.info("Generating callback message")
+        headers = {
+                "Content-type": "application/json",
+                "Accept": "application/json"
+                }
+        data = {
+                "blueprint":
+                {
+                    "id": blueId,
+                    "type": "Free5GC_K8s"
+                },
+                "requested_operation": requestedOperation,
+                "session_id": blueId,
+                "status": status
+              }
+        r = None
+        try:
+            r = requests.post(callback, json=data, params=None, verify=False, stream=True, headers=headers)
+            return r
+        except Exception as e:
+            logger.error("Error - posting callback: ", e)
+    else:
+        logger.info("No callback message is specified")
+        return None
 
 def getSliceFromSlices(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel],
                        athonetSlicesList: List[AthonetSlice]) -> Union[AthonetSlice,None]:
@@ -92,6 +119,7 @@ def checkAndAddSliceType(sliceType: str, athonetSlices: Union[AthonetSlice, List
 async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
         logger.info("Received message from OSS: {}".format(free5gcMessage))
+        callback = free5gcMessage.callbackURL
         readySlices = db.readAthonetSlices()
         if type(readySlices) != list:
             readySlicesList = [readySlices]
@@ -116,8 +144,10 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
             addImsiToSlice = AddImsiRequest.fromAthonetSliceModel(athonetSlice)
             addImsiToSlice.imsi = imsiToAdd
             athonetInterface.addImsiToSlice(addImsiToSlice)
+        restCallback(callback, "add_slice", blue_id, blue_id, "ready")
         return RestAnswer202()
     except Exception as e:
+        restCallback(callback, "add_slice", blue_id, blue_id, "failed")
         logger.warn("Impossible to add the slice: {} - {}".format(free5gcMessage, e))
         raise HTTPException(status_code=404, detail="Impossible to add the slice: {} - {}"
                             .format(free5gcMessage, e))
@@ -126,6 +156,7 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
 async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
         logger.info("Received message from OSS: {}".format(free5gcMessage))
+        callback = free5gcMessage.callbackURL
         readySlices = db.readAthonetSlices()
         if type(readySlices) != list:
             readySlicesList = [readySlices]
@@ -144,8 +175,10 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
             # TODO: Athonet-OTE Interface doesn't de-attach IMSI
             # raise HTTPException(status_code=404,
             #                     detail="Athonet REST API to remove IMSI is not yet implemented")
+            restCallback(callback, "add_slice", blue_id, blue_id, "ready")
             return RestAnswer202()
     except Exception as e:
+        restCallback(callback, "add_slice", blue_id, blue_id, "failed")
         logger.warn("Impossible to delete IMSI ({}) from slice"
                     .format(free5gcMessage.config.subscribers[0].imsi))
         raise HTTPException(status_code=404, detail="Impossible to delete IMSI ({}) from slice: {}"
