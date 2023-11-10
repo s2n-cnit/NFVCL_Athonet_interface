@@ -152,7 +152,7 @@ async def addImsiToSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFr
         raise HTTPException(status_code=404, detail="Impossible to add the slice: {} - {}"
                             .format(free5gcMessage, e))
 
-@router.post("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/del_slice", response_model=RestAnswer202)
+@router.delete("/nfvcl/v1/api/blue/Free5GC_K8s/{blue_id}/del_slice", response_model=RestAnswer202)
 async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel], blue_id: str):
     try:
         logger.info("Received message from OSS: {}".format(free5gcMessage))
