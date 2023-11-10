@@ -175,8 +175,8 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
             # TODO: Athonet-OTE Interface doesn't de-attach IMSI
             # raise HTTPException(status_code=404,
             #                     detail="Athonet REST API to remove IMSI is not yet implemented")
-            restCallback(callback, "add_slice", blue_id, blue_id, "ready")
-            return RestAnswer202()
+        restCallback(callback, "add_slice", blue_id, blue_id, "ready")
+        return RestAnswer202()
     except Exception as e:
         restCallback(callback, "add_slice", blue_id, blue_id, "failed")
         logger.warn("Impossible to delete IMSI from slice")
