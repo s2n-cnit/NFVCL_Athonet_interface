@@ -95,8 +95,8 @@ def getSliceFromSlices(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree
     for item in athonetSlicesList:
         logger.info("1/2 - comparing (using sliceId) to: {}".format(item))
         if (
-                    "{}{}".format(free5gcMessage.config.sliceProfiles[0].sliceType,
-                                  int(free5gcMessage.config.sliceProfiles[0].sliceId, 16)) in item.sliceId.lower()
+                ("{}{}".format(free5gcMessage.config.sliceProfiles[0].sliceType,
+                                  int(free5gcMessage.config.sliceProfiles[0].sliceId, 16))).lower() in item.sliceId.lower()
         ):
             return item
     for item in athonetSlicesList:
