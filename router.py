@@ -46,7 +46,7 @@ def getImsiListFromFile(fileName: str = ""):
     imsiList = []
     try:
         with open(imsiListFile, "r") as f:
-            imsiList = f.readlines()
+            imsiList = f.read().splitlines()
     except Exception as e:
         logger.error("Impossible to read the file \"{}\"".format(imsiListFile))
         raise ValueError("Impossible to read the file \"{}\"".format(imsiListFile))
@@ -82,7 +82,10 @@ def restCallback(callback, requestedOperation, blueId, sessionId, status):
 def getSliceFromSlices(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree5gcModel],
                        athonetSlicesList: List[AthonetSlice]) -> Union[AthonetSlice,None]:
     """
-    Choose the better slice
+    Choose the better slice.
+    It uses two algorithm:
+     1 - search using the slice name. ex: "EMBB0000001" -> "Induce-5G-Athens-EMBB1"
+     2 - search using slice parameters: userDensity, userSpeed and type
     :param free5gcMessage:
     :param athonetSlicesList:
     :return:
@@ -90,7 +93,14 @@ def getSliceFromSlices(free5gcMessage: Union[Free5gck8sBlueCreateModel, MiniFree
     athonetSliceSearch = AthonetSlice.fromFree5gc(free5gcMessage)
     logger.info("requested SLICE: {}".format(athonetSliceSearch))
     for item in athonetSlicesList:
-        logger.info("comparing to: {}".format(item))
+        logger.info("1/2 - comparing (using sliceId) to: {}".format(item))
+        if (
+                    "{}{}".format(free5gcMessage.config.sliceProfiles[0].sliceType,
+                                  int(free5gcMessage.config.sliceProfiles[0].sliceId, 16)) in item.sliceId.lower()
+        ):
+            return item
+    for item in athonetSlicesList:
+        logger.info("2/2 - comparing (using parameters) to: {}".format(item))
         if (
                     # expDataRateUL/DL will be set up
                     #item.expDataRateUL >= athonetSliceSearch.expDataRateUL and
@@ -175,11 +185,11 @@ async def delImsiFromSlice(free5gcMessage: Union[Free5gck8sBlueCreateModel, Mini
             # TODO: Athonet-OTE Interface doesn't de-attach IMSI
             # raise HTTPException(status_code=404,
             #                     detail="Athonet REST API to remove IMSI is not yet implemented")
-        restCallback(callback, "add_slice", blue_id, blue_id, "ready")
+        restCallback(callback, "del_slice", blue_id, blue_id, "ready")
         return RestAnswer202()
     except Exception as e:
-        restCallback(callback, "add_slice", blue_id, blue_id, "failed")
-        logger.warn("Impossible to delete IMSI from slice")
+        restCallback(callback, "del_slice", blue_id, blue_id, "failed")
+        logger.warn("Impossible to delete IMSI from slice: {}".format(e))
         raise HTTPException(status_code=404, detail="Impossible to delete IMSI from slice: {}"
                             .format(e))
 
