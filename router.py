@@ -4,6 +4,7 @@ Copyright (c) 2023 - S2N Lab (https://s2n.cnit.it/)
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 import requests
+import os
 from athonetRestApi import AthonetRestAPI
 from utils import create_logger, Database
 from typing import Union, List
@@ -237,6 +238,34 @@ async def addSlices(sliceType: str, athonetSlices: Union[AthonetSlice, List[Atho
     except Exception as e:
         logger.warn("Impossible to delete the slices ({}) on the DB: {}".format(sliceType, e))
         raise HTTPException(status_code=404, detail="Impossible to accept the slices: {}".format(e))
+
+
+@router.put("/k8s/{cluster_id}/namespace/{name}", response_model=RestAnswer202)
+async def addSlices(cluster_id: str, name: str):
+    logger.info("Received message from OSS - create k8s namespace - cluster_id = {}, name = {}".format(cluster_id, name))
+    try:
+        returnCode=os.system("kubectl create namespace {}".format(name))
+        if returnCode == 0:
+            return RestAnswer202()
+        else:
+            raise HTTPException(status_code=404, detail="Impossible to create the namespace: {}".format(name))
+    except Exception as e:
+        logger.warn("Error in namespace creation ({}): {}".format(name, e))
+        raise HTTPException(status_code=404, detail="Impossible to create the namespace: {}".format(e))
+
+
+@router.delete("/k8s/{cluster_id}/namespace/{name}", response_model=RestAnswer202)
+async def addSlices(cluster_id: str, name: str):
+    logger.info("Received message from OSS - delete k8s namespace - cluster_id = {}, name = {}".format(cluster_id, name))
+    try:
+        returnCode=os.system("kubectl delete namespace {}".format(name))
+        if returnCode == 0:
+            return RestAnswer202()
+        else:
+            raise HTTPException(status_code=404, detail="Impossible to delete the namespace: {}".format(name))
+    except Exception as e:
+        logger.warn("Error in namespace deletion ({}): {}".format(name, e))
+        raise HTTPException(status_code=404, detail="Impossible to delete the namespace: {}".format(e))
 
 
 
