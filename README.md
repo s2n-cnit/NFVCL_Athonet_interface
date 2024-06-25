@@ -20,9 +20,26 @@ If found (6), the NFVCL sends a message to Athonet to ask for an attachment oper
 After download the code, follow the steps below:
 - Configure "athonethost.txt" and "imsilist.txt":
   - "athonethost.txt": IP address and port of the Athonet 5G core interface
+    ``` bash
+    # athonethost.txt
+    127.0.0.1
+    8080
+  ```
   - "imsilist.txt": the list of the IMSI of the devices to be attached and deattached to/from the requested slice
+    ``` bash
+    # imsilist.txt
+    001010000000001
+    001010000000002
+    001010000000003
+    ```
 - Execute the "setup.sh" script. It download and install all the software needed for the execution of the "NFVCL Athonet Interface".
-- Lauch "run.sh". This script creates two screens where the code will be in execution. 
+  ``` bash
+  ./setup.sh
+  ```
+- Lauch "run.sh". This script creates two screens where the code will be in execution.
+  ``` bash
+  ./run.sh
+  ```
 
 
 
