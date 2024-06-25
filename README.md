@@ -24,7 +24,7 @@ After download the code, follow the steps below:
     # athonethost.txt
     127.0.0.1
     8080
-  ```
+    ```
   - "imsilist.txt": the list of the IMSI of the devices to be attached and deattached to/from the requested slice
     ``` bash
     # imsilist.txt
