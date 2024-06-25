@@ -1,5 +1,5 @@
 # "NFVCL Athonet Interface" (NAI)
-The "NFVCL Athonet Interface" (NAI) is the south-bound component to allow NFVCL to interact with Athonet 5G core subsystem (named "greek exFa" in the "5G-Induce" project, [Wiki](https://www.5g-induce.eu/)) .
+The "NFVCL Athonet Interface" (NAI) is the south-bound component to allow NFVCL to interact with Athonet 5G core subsystem (named "greek exFa" in the "5G-Induce" project, [5G-Induce project](https://www.5g-induce.eu/)) .
 
 ## NFVCL
 The NFVCL is a network-oriented meta-orchestrator, specifically designed for zeroOps and continuous automation. 
