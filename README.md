@@ -7,7 +7,7 @@ It can create, deploy and manage the lifecycle of different network ecosystems b
 artefacts at any programmability levels (from physical devices to cloud-native microservices).
 A more detailed description of the NFVCL will be added to the [Wiki](https://nfvcl-ng.readthedocs.io/en/latest/index.html).
 
-## How does it work
+## Workflow
 At the booting time the Athonet 5G Core subsystem sends the list of the existing slices to the NFVCL (1).
 The NAI receives the messages and save the information on the internal DB (2), updating the existing if needed.
 After that, everytime, the OSS can requests a slice-intent (3).
